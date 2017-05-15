@@ -1,0 +1,317 @@
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/mixins";
+@import "partials/mob";
+@import "partials/dekstplt";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.btn-reg {
+    color: $white;
+    text-align: center;
+    font: {
+        size: 30px;
+        weight: 700;
+    }
+    background-color: $orange;
+    border: none;
+    border-bottom: 5px solid #ff332a;
+}
+
+header {
+    width: 100%;
+    @include flex-box(column, center, center);
+    height: 155px;
+    border-bottom: 2px ridge #ddd;
+    p {
+        margin-top: -10px;
+        padding-left: 66px;
+        font: {
+            size: 27px;
+            weight: 400;
+        }
+        color: $dark-blue;
+    }
+}
+
+.event-info {
+    @include flex-box(column, flex-start, center);
+    h1 {
+        font-family: CirceBold, sans-serif;
+        font-size: 34px;
+        color: $orange;
+        text-transform: uppercase;
+    }
+    .title {
+        font-family: CirceBold, sans-serif;
+        font-size: 30px;
+        color: $black;
+        line-height: 36px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+    .btn-reg {
+        width: 436px;
+        height: 75px;
+        margin-top: 24px;
+    }
+
+    
+    .event-cv {
+        .event-start {
+            height: 1270px;
+            background-color: $light-grey;
+            text-align: center;
+            h3 {
+                color: $grey;
+                font: {
+                    weight: 700;
+                }
+                text-transform: uppercase;
+            } // DONE!!!!!
+            .timer {
+                display: flex;
+                justify-content: center;
+                .timer__block {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    span {
+                        display: block;
+                    }
+                    .number {
+                        font: {
+                            family: CirceBold, sans-serif;
+                        }
+                        color: $white;
+                        background-color: $grey;
+                    }
+                    .text {
+                        margin: 12px 0;
+                        font: {
+                            family: CirceBold, sans-serif;
+                        }
+                        color: $grey;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            h4 {
+                text-align: left;
+                color: $grey;
+                font: {
+                    weight: 700;
+                }
+                text-transform: uppercase;
+            }
+            .event-syllabus {
+                text-align: left;
+                li {
+                    position: relative;
+                    margin-bottom: 22px;
+                    font: {
+                        size: 24px;
+                        weight: 400;
+                    }
+                    span {
+                        font-weight: 700;
+                    }
+                    &:before {
+                        position: absolute;
+                        top: 9px;
+                        display: block;
+                        width: 24px;
+                        height: 20px;
+                        content: '';
+                        background: url('../img/check-mark.png') no-repeat;
+                    }
+                }
+            }
+
+        } //.event-start END
+        .event-contributor {
+            background-color: $orange;
+            text-align: center;
+            .timing {
+                display: flex;
+                justify-content: space-between;
+                .calendar {
+                    display: flex;
+                    flex-direction: column;
+                    .month {
+                        color: $white;
+                        font: {
+                            weight: 700;
+                        }
+                        background-color: $grey;
+                    }
+                    .day {
+                        color: #c2c2c2;
+                        font: {
+                            weight: 700;
+                        }
+                        background-color: $white;
+                    }
+                }
+                .date {
+                    @include flex-box (column, flex-start, stretch);
+                    text-align: left;
+                    span {
+                        color: $white;
+                        font: {
+                            family: CirceBold, sans-serif;
+                        }
+                        text-transform: uppercase;
+                        &:nth-child(2) {
+                            border-bottom: 1px dashed $white;
+                        }
+                        &:last-child {
+                            font: {
+                                family: 'PT Sans', sans-serif;
+                                weight: 400;
+                            }
+                        }
+                    }
+                }
+            } //.timing END
+            .contributor-info {
+                @include flex-box (column, flex-start, center);
+                color: $white;
+                .occupation {
+                    font: {
+                        family: GeorgiaItalic, serif;
+                    }
+                }
+                .first-name,
+                .surname {
+                    font: {
+                        // size: 25px;
+                        weight: 700;
+                    }
+                    text-transform: uppercase;
+                }
+                .traits {
+                    text-align: left;
+                    list-style: disc;
+                    list-style-position: outside;
+                    font: {
+                        weight: 400;
+                    }
+                }
+            }
+        } //.event-contributor END
+    } //.event-cv END
+    .event-format {
+        @include flex-box (column, flex-start, center);
+        text-align: center;
+        border-bottom: 1px dashed #64666b;
+        p {
+            font: {
+                family: GeorgiaItalic, serif;
+                size: 28px;
+            }
+            color: $grey;
+            text-transform: none;
+            span {
+                font-size: 35px;
+            }
+            &:nth-child(n+2) {
+                font: {
+                    family: 'PT Sans', sans-serif;
+                    size: 30px;
+                }
+            }
+        }
+        .users {
+            width: 360px;
+            height: 53px;
+            margin: 43px 0 12px;
+            line-height: 53px;
+            text-align: center;
+            font: {
+                size: 36px;
+                weight: 700;
+            }
+            color: $white;
+            background-color: $orange;
+        }
+    } //.event-format END
+} //section .event-info END!
+
+
+.outline {
+    color: #2b2e35;
+    // font-size: 24px;
+    span {
+        font-weight: 700;
+    }
+    .title {
+        margin: 32px 0 17px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .pros {
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .custom-img {
+        @include flex-box (row, center, center);
+        height: 373px;
+        margin-top: 17px;
+        background-color: #efefef;
+    }
+} //section .outline END!
+
+footer {
+    text-align: center;
+    p {
+        color: $grey;
+        font-size: 24px;
+        &:first-child {
+            padding: 27px 0;
+            font-weight: 400;
+        }
+    }
+    .welcome {
+        font-weight: 700;
+    }
+    .btn-reg {
+        width: 561px;
+        height: 56px;
+        margin-top: 65px;
+    }
+    .social-btn {
+        margin-top: 47px;
+        text-align: center;
+    }
+}
+

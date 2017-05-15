@@ -1,0 +1,126 @@
+@media (max-width: 1019px) {
+    .wrapper {
+        width: 563px;
+    }
+
+    .event-info {
+        // height: 23423px;
+        .event-cv {
+            @include flex-box(column, flex-start, center);
+            .event-start {
+                width: 100%;
+                padding-left: 45px;
+                padding-right: 15px;
+                margin-top: 52px;
+                h3 {
+                    margin: 35px 0 16px;
+                    font: {
+                        size: 24px;
+                    }
+                }
+                .timer {
+                    .number {
+                        width: 75px;
+                        height: 75px;
+                        line-height: 80px;
+                        font: {
+                            size: 54px;
+                        }
+                        border-radius: 11px;
+                    }
+                    .text {
+                        font: {
+                            size: 16px;
+                        }
+                    }
+                }
+                h4 {
+                    margin: 19px 0 19px;
+                    font: {
+                        size: 27px;
+                    }
+                }
+                .event-syllabus {
+                    margin-top: 67px;
+                    li {
+                        padding: 0 10px 0 45px;
+                        &:before {
+                            left: 5px;
+                        }
+                    }
+                }
+            } //.event-start END
+            .event-contributor {
+                width: 100%;
+                height: 1297px;
+                padding: 42px 19px 0 36px;
+                .calendar {
+                    width: 142px;
+                    .month {
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 25px;
+                    }
+                    .day {
+                        height: 104px;
+                        line-height: 104px;
+                        font-size: 83px;
+                    }
+                }
+                .date {
+                    width: 322px;
+                    span {
+                        &:first-child {
+                            font-size: 34px;
+                        }
+                        &:nth-child(2) {
+                            font-size: 40px;
+                        }
+                        &:last-child {
+                            font: {
+                                size: 27px;
+                            }
+                        }
+                    }
+                }
+                .contributor-info {
+                    margin-top: 65px;
+                    .occupation {
+                        margin: 19px 0 16px;
+                        font-size: 25px;
+                    }
+                    .first-name,
+                    .surname {
+                        font-size: 25px;
+                    }
+                    .traits {
+                        margin-top: 35px;
+                        padding-left: 53px;
+                        font: {
+                            size: 20px;
+                        }
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+            } //.event-contributor END
+        } //.event-cv END
+        .event-format {
+            height: 390px;
+            padding: 49px 17px 0;
+        }
+    }
+
+    .outline {
+       font-size: 24px; 
+    }
+
+    .event-info {
+        h1 {
+            margin: 20px 0 30px;
+        }
+    }
+}

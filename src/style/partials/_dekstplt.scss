@@ -1,0 +1,138 @@
+@media (min-width: 1020px) {
+    .wrapper {
+        width: 1020px;
+    }
+
+    .event-info {
+        height: 1995px;
+        .event-cv {
+            @include flex-box(row, flex-start, center);
+            margin-top: 39px;
+            .event-start {
+                order: 5;
+                width: 50%;
+                padding-left: 40px;
+                padding-right: 20px;
+                h3 {
+                    margin: 28px 0 13px;
+                    font: {
+                        size: 21px;
+                    }
+                }
+                .timer {
+                    .number {
+                        width: 67px;
+                        height: 67px;
+                        line-height: 72px;
+                        font: {
+                            size: 48px;
+                        }
+                        border-radius: 10px;
+                    }
+                    .text {
+                        font: {
+                            size: 14px;
+                        }
+                    }
+                }
+                h4 {
+                    margin: 19px 0 19px;
+                    font: {
+                        size: 24px;
+                    }
+                }
+                .event-syllabus {
+                    margin-top: 57px;
+                    li {
+                        padding: 0 0 0 35px;
+                        &:before {
+                            left: 0
+                        }
+                    }
+                }
+            } //.event-start END
+            .event-contributor {
+                order: 0;
+                width: 50%;
+                height: 1270px;
+                padding: 42px 19px 0 36px;
+                .calendar {
+                    width: 126px;
+                    .month {
+                        height: 29px;
+                        line-height: 30px;
+                        font-size: 20px;
+                    }
+                    .day {
+                        height: 92px;
+                        line-height: 88px;
+                        font-size: 73px;
+                    }
+                }
+                .date {
+                    width: 290px;
+                    span {
+                        &:first-child {
+                            font-size: 30px;
+                        }
+                        &:nth-child(2) {
+                            font-size: 36px;
+                        }
+                        &:last-child {
+                            font: {
+                                size: 24px;
+                            }
+                        }
+                    }
+                }
+                .contributor-info {
+                    margin-top: 40px;
+                    .occupation {
+                        margin: 4px 0 16px;
+                        font-size: 22px;
+                    }
+                    .first-name,
+                    .surname {
+                        font-size: 20px;
+                    }
+                    .traits {
+                        margin-top: 32px;
+                        padding-left: 44px;
+                        font: {
+                            size: 18px;
+                        }
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            } //.event-contributor END
+        } //.event-cv END
+        .event-format {
+            height: 352px;
+            padding: 48px 17px 0;
+        }
+    }
+    
+    .outline {
+        padding-top: 15px;
+        font-size: 24px; 
+        .title {
+            font-size: 21px;
+        }
+        span {
+            font-size: 27px;
+        }
+    }
+
+
+
+    .event-info {
+       padding: 0 20px;
+        h1 {
+            margin: 47px 0 30px;
+        }
+    }
+}
